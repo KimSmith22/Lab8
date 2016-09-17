@@ -1,10 +1,6 @@
 import java.util.Scanner;
 
 /**
- * 
- */
-
-/**
  * @author Kimberli
  *
  */
@@ -16,24 +12,28 @@ public class BaseballAverages {
 	public static void main(String[] args) {
 
 		// variables
-		int times = 0;
-		int totTimes = 0;
+		int atBat = 0;
+		int scoredAtBat= 0;
 		int base = 0;
 		int slug = 0;
 		int batav = 0;
-
+		
+		//sysout
 		System.out.println("Batting Average Calculator");
 		System.out.println();
 
+		//prompt for user input
 		System.out.println("Enter number of times at bat:  ");
 		Scanner k = new Scanner(System.in);
-		times = k.nextInt();
+		atBat = k.nextInt();
 		System.out.println();
 		
+		//scoring legend
 		System.out.println("0 = out, 1 = single, 2 = double, 3 = triple, 4 = home run");
 		
-		BaseballMethods.getBatAvg(times, totTimes, base, batav);
-		BaseballMethods.getSlug(times, base, slug);
+		//call methods to invoke output
+		BaseballMethods.getBatAvg(atBat, scoredAtBat, base, batav);
+		BaseballMethods.getSlug(atBat, base, slug);
 		
 		
 

@@ -6,13 +6,13 @@ public class BaseballMethods {
 
 	}
 
-	public static  void getBatAvg( int times, int totTimes, int base, int batav) {
-		int BatAvg = (totTimes/times);
+	public static  void getBatAvg( int atBat, int scoredAtBat, int base, int batav) {
+		int BatAvg = (scoredAtBat/atBat);
 		return;
 	}
 
-	public static void getSlug(int times, int base, int slug) {
-		int Slug = (base/times);
+	public static void getSlug(int atBat, int base, int slug) {
+		int Slug = (base/atBat);
 		return;
 	}
 
