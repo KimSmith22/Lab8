@@ -42,10 +42,10 @@ public class BaseballAverages {
 		int[] base = {0, 1, 0, 2, 3};
 		for(int i = 0; i < base.length; i++){
 			/*tried a bunch of different variables in the following line
-			 * in an attemp to see which variable would get the output
-			 * to increment; while i++ works i am not getting expected result
+			 * in an attempt to see which variable would get the output
+			 * to increment; while i+1 works i am not getting expected result
 			 */
-			System.out.println("Result for at-bat " +( i++) + ":  " + base[i]);
+			System.out.println("Result for at-bat " +(i+1) + ":  " + base[i]);
 		}
 			
 		/*call methods to invoke output
