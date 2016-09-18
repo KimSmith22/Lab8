@@ -29,14 +29,15 @@ public class BaseballAverages {
 			//array of unknown length
 		int atBat = Integer.parseInt(k.nextLine());
 		int[] times = new int[atBat];
-		if(atBat > 4){
+		while(atBat > 4){
 			System.out.println("Please enter a number between 0 and 4");
-		}else {
+			atBat = k.nextInt();
+		}
 		System.out.println();
 		
 		//scoring legend
 		System.out.println("0 = out, 1 = single, 2 = double, 3 = triple, 4 = home run");
-		}
+	
 		//call methods to invoke output
 		BaseballMethods.getBatAvg(atBat, scoredAtBat, base, batav);
 		BaseballMethods.getSlug(atBat, base, slug);
