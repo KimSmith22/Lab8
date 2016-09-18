@@ -54,8 +54,8 @@ public class BaseballAverages {
 			 * of instances where batter makes a base, currently dividing by
 			 * total number of times at bat.
 			 */
-			//System.out.println("Batting average is:  " + (sum / scored)); //scored is future variable to identify number of times scored at bat
-			System.out.println("Slugging Percent:  " + (sum/times.length));
+			System.out.println("Batting average is:  " + (times.length / sum));//not calculating at bat with score
+			System.out.println("Slugging Percent:  " + (sum / times.length));
 			System.out.println();
 
 			System.out.println("Another batter?  y/n");
@@ -64,4 +64,4 @@ public class BaseballAverages {
 
 	}// psvm
 
-}// end clas
+}// end class
