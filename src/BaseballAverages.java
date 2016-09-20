@@ -13,6 +13,7 @@ public class BaseballAverages {
 
 		// variables
 		int value = 0;
+		int hits = 0;
 		int[] array = null ;
 		int battters = 0;
 		String choice = "y";
@@ -63,6 +64,9 @@ public class BaseballAverages {
 								// decimal
 			for (int i = 0; i < times.length; i++) {// initiate for loop
 				sum += batters[i];
+					if(batters[i] > 0){//iterates thru each index of array and add instances where index is greater than 0
+					 hits = hits + 1;
+					}
 				/*
 				 * tried a bunch of different variables in the following line in
 				 * an attempt to see which variable would get the output to
@@ -77,7 +81,7 @@ public class BaseballAverages {
 			 * of instances where batter makes a base, currently dividing by
 			 * total number of times at bat.
 			 */
-			System.out.println("Batting average is:  " + (times.length / sum));//need to divide hits, by sum
+			System.out.println("Batting average is:  " + (hits / sum));//need to divide hits, by sum
 			System.out.println("Slugging Percent:  " + (sum / times.length));
 			System.out.println();
 
