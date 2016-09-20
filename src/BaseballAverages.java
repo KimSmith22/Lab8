@@ -12,6 +12,8 @@ public class BaseballAverages {
 	public static void main(String[] args) {
 
 		// variables
+		int value = 0;
+		int[] array = null ;
 		String choice = "y";
 
 		// sysout
@@ -25,7 +27,7 @@ public class BaseballAverages {
 			// array of unknown length
 			int atBat = Integer.parseInt(k.nextLine());
 			int[] times = new int[atBat];
-			while (atBat > 4) {// boolean statement to initiate loop &
+			while (atBat < 0 || atBat > 4) {// boolean statement to initiate loop &
 								// validation statement
 				System.out.println("Please enter a number between 0 and 4")
 				;/*if the above line prints and user follows with a number
@@ -43,6 +45,13 @@ public class BaseballAverages {
 			 * a single array was used to test the program
 			 */
 			int[] base = { 0, 4, 0, 1, 3 }; // code to print array data to console
+			/*
+			 * int[]batters = new int[5];
+			 * batters[0] = { };
+			 * batters[1] = { };
+			 * batters[3] = { };
+			 * batters[4] = { };
+			 */
 			double sum = 0.000; // sets sum to double showing three places past
 								// decimal
 			for (int i = 0; i < times.length; i++) {// initiate for loop
