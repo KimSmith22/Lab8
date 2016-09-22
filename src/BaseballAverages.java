@@ -39,18 +39,19 @@ public class BaseballAverages {
 		 
 			double sum = 0.000; // sets sum to double showing three places past
 								// decimal
-			for (int i = 0; i < times.length; i++) {// initiate for loop
-				sum += i;
-					if(i > 0){//iterates thru each index of array and add instances where index is greater than 0
-					 hits = hits + 1;
+			for (int i = 0; i <= times.length-1; i++) {// initiate for loop
+				sum = sum + 1 ;
+					if(i > -1){//iterates thru each index of array and add instances where index is greater than 0
+					 hits= hits + 1;
 					}
 				//System.out.println("For player:  " + num);
-				System.out.println("Result for at-bat " + (i + 1) + ":  ");
+				System.out.println("Result for at-bat " + (i+1 ) + ":  ");
 				int value = k.nextInt();
 			} // end for loop
 			System.out.println();
 			
 			System.out.println("Batting average is:  " + (hits / sum));//need to divide hits, by sum
+			//System.out.println("Average is:  " + hits + "/" + sum + "= " + (hits/sum));
 			System.out.println("Slugging Percent:  " + (sum / times.length));
 			System.out.println();
 			
