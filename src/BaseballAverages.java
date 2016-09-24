@@ -13,6 +13,7 @@ public class BaseballAverages {
 
 		// variables
 		int hits = 0;
+		int atBat;
 		String choice = "y";
 
 		// sysout
@@ -23,7 +24,7 @@ public class BaseballAverages {
 			
 			System.out.println("Enter number of times at bat (1 thru 5):  ");		
 			Scanner k = new Scanner(System.in);
-			int atBat = k.nextInt();
+			 atBat = k.nextInt();
 
 			// array of unknown length
 			int[] times = new int[atBat];
@@ -39,20 +40,20 @@ public class BaseballAverages {
 		 
 			double sum = 0.000; // sets sum to double showing three places past
 								// decimal
-			for (int i = 0; i <= times.length-1; i++) {// initiate for loop
-				sum = sum + 1 ;
+			for (int i = 0; i <= times.length - 1; i++) {// initiate for loop
+				sum = sum ++ ;
 					if(i > -1){//iterates thru each index of array and add instances where index is greater than 0
-					 hits= hits + 1;
+					 hits= hits ++;
 					}
 				//System.out.println("For player:  " + num);
-				System.out.println("Result for at-bat " + (i+1 ) + ":  ");
+				System.out.println("Result for at-bat " + (i + 1 ) + ":  ");
 				int value = k.nextInt();
 			} // end for loop
 			System.out.println();
 			
-			System.out.println("Batting average is:  " + (hits / sum));//need to divide hits, by sum
+			System.out.println("Batting average is:  " + (hits));//need to divide hits, by sum
 			//System.out.println("Average is:  " + hits + "/" + sum + "= " + (hits/sum));
-			System.out.println("Slugging Percent:  " + (sum / times.length));
+			System.out.println("Slugging Percent:  " + (sum));
 			System.out.println();
 			
 			k.nextLine();
