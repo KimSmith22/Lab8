@@ -9,6 +9,7 @@ public class BaseballAveragesv2 {
 
 		int atBat;
 		int batters;
+		int hits = 0;
 
 		// sysout & scanner
 		System.out.println("Batting Average Calculator");
@@ -35,12 +36,16 @@ public class BaseballAveragesv2 {
 		for (int i = 0; i <= players.length-1; i++) {//row loop
 			for (int j = 0; j <= players.length-1; j++) {//column loop
 			sum = sum+1;
+			if(j > 0){
+				 hits = hits ++;
+			}//end loop to count hits
 				System.out.println("Enter player  " + (i + 1) + " at bat " + (j+1) + " :  ");
 				atBat = k.nextInt();
-
+				
+				
 			}//end column loop
 		}//end row loop
-
+System.out.println("Batting average:  " + hits/atBat );
 	}// psvm
 
 }// end class
