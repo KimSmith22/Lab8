@@ -10,6 +10,8 @@ public class BaseballAveragesv2 {
 		int atBat;
 		int batters;
 		int hits = 0;
+		int i;
+		int j;
 
 		// sysout & scanner
 		System.out.println("Batting Average Calculator");
@@ -30,22 +32,24 @@ public class BaseballAveragesv2 {
 		} // end validation loop
 		System.out.println("0 = out, 1 = single, 2 = double, 3 = triple, 4 = home run");
 		System.out.println();
-		
+
 		double sum = 0.000;
 		int x = 0;
-		for (int i = 0; i <= players.length-1; i++) {//row loop
-			for (int j = 0; j <= players.length-1; j++) {//column loop
-			sum = sum+1;
-			if(j > 0){
-				 hits = hits ++;
-			}//end loop to count hits
-				System.out.println("Enter player  " + (i + 1) + " at bat " + (j+1) + " :  ");
+		int y = 0;
+		for (i = 0; i <= players.length - 1; i++) {// row loop
+			for (j = 0; j <= players.length - 1; j++) {// column loop
+				sum = y + 1;
+				if (j > -1) {
+					hits = x + 1;
+				} // end loop to count hits
+				System.out.println("Enter player  " + (i + 1) + " at bat " + (j + 1) + " :  ");
 				atBat = k.nextInt();
-				
-				
-			}//end column loop
-		}//end row loop
-System.out.println("Batting average:  " + hits/atBat );
+
+			} // end column loop
+		} // end row loop
+
+		System.out.println("Player " + (i - 1) + " Batting average:  " + hits / atBat
+				+ "                                             Slugging Percentage:  " + sum / atBat);
 	}// psvm
 
 }// end class
